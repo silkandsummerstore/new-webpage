@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Can I visit the boutique?",
-    a: "Absolutely. We're near Ana Sagar in Ajmer. Appointments welcome.",
+    a: "You can visit our Rajasthan studio by prior appointment. Details are shared after your consultation is confirmed.",
   },
   {
     q: "What if my size doesn't fit?",

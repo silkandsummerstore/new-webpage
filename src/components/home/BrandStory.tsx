@@ -69,28 +69,23 @@ export function BrandStory() {
               data-story-text
               className="editorial-heading text-5xl md:text-6xl lg:text-7xl text-charcoal mb-8"
             >
-              Born in Ajmer,
+              Crafted in Rajasthan,
               <br />
-              <span className="italic text-maroon">worn everywhere.</span>
+              <span className="italic text-maroon">woven through four generations.</span>
             </h2>
             <div className="space-y-6 font-serif text-lg text-charcoal/80 leading-relaxed" data-story-text>
               <p>
-                Silk & Summer began in a sun-washed atelier near Ana Sagar — where
-                Rajasthani artisans meet contemporary silhouettes. We don&apos;t chase
-                seasons. We chase feeling.
+                Desi­gning and handwork began with our great-grandmother, was refined by our grandmother,
+                lovingly guarded by our mother, and now continues with a daughter bringing a modern eye.
               </p>
               <p>
-                Every piece is small-batch or one-off. Hand-blocked, hand-stitched,
-                hand-finished. We work with local craftspeople who have carried
-                techniques through generations — and give them room to experiment.
-              </p>
-              <p>
-                This is wearable art. Affordable luxury. Modern heirlooms you&apos;ll
-                pass down, or simply never take off.
+                Together we are a mother–daughter studio from Rajasthan, India — one hand rooted in
+                heritage embroidery and pattern-cutting, the other playing with contemporary silhouettes
+                and everyday wearability.
               </p>
             </div>
             <div className="mt-10" data-story-text>
-              <Button href="/lookbook">Read the Journal</Button>
+              <Button href="/story">Read our full story</Button>
             </div>
           </div>
 

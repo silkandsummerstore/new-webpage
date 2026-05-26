@@ -42,7 +42,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <BrandLogo variant="light" size="lg" showHindi />
             <p className="mt-6 font-serif text-lg text-ivory/60 leading-relaxed max-w-sm">
-              Modern heirlooms from Ajmer. Handcrafted for the beautifully undone.
+              Modern heirlooms from Rajasthan, India. Handcrafted for the beautifully undone.
             </p>
             <form onSubmit={handleNewsletter} className="mt-8">
               <label htmlFor="newsletter" className="luxury-label text-ivory/50 block mb-3">
@@ -102,16 +102,12 @@ export function Footer() {
 
           {/* Boutique */}
           <div className="lg:col-span-4">
-            <h3 className="luxury-label text-ivory/50 mb-6">Visit Us</h3>
-            <address className="not-italic font-serif text-xl text-ivory leading-relaxed">
-              Silk & Summer Atelier
-              <br />
-              Near Ana Sagar, Ajmer
-              <br />
-              Rajasthan 305001, India
-            </address>
+            <h3 className="luxury-label text-ivory/50 mb-6">Studio & Online</h3>
+            <p className="font-serif text-xl text-ivory leading-relaxed">
+              A mother–daughter atelier rooted in Rajasthan, India — heritage design from mum, a modern touch from daughter.
+            </p>
             <p className="mt-4 text-sm text-ivory/50">
-              By appointment · Wed–Sun, 11am–7pm
+              Custom pieces and ready-to-ship edits, available worldwide.
             </p>
             <div className="flex gap-6 mt-8">
               <a
@@ -144,7 +140,7 @@ export function Footer() {
 
         <div className="mt-20 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between gap-4">
           <p className="text-xs text-ivory/40">
-            © {new Date().getFullYear()} Silk & Summer. Crafted in Ajmer.
+            © {new Date().getFullYear()} Silk & Summer. Crafted with love in Rajasthan, India.
           </p>
           <div className="flex gap-6">
             {legalLinks.map((l) => (

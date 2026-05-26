@@ -46,7 +46,7 @@ export function Community() {
           rel="noopener noreferrer"
           className="luxury-label hover:text-maroon transition-colors"
         >
-          @silkandsummer on Instagram →
+          See the latest on Instagram →
         </a>
       </div>
 

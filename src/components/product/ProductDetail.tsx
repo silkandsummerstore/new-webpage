@@ -78,7 +78,7 @@ export function ProductDetail({ product }: { product: Product }) {
             </span>
             {product.madeInAjmer && (
               <span className="luxury-label border border-terracotta/40 text-terracotta px-3 py-1.5">
-                Made in Ajmer
+                Made in Rajasthan, India
               </span>
             )}
           </div>

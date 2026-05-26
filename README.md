@@ -1,6 +1,6 @@
 # Silk & Summer
 
-A cinematic, editorial luxury fashion experience for a contemporary Indian label based in Ajmer, Rajasthan.
+A cinematic, editorial luxury fashion experience for a contemporary Indian label based in Rajasthan, India.
 
 ## Stack
 
@@ -16,7 +16,7 @@ Bilingual lockup in the top-left navigation:
 
 - **रेशम** (Silk) — top
 - **Silk & Summer** — center with marigold motif
-- **ग्रीष्म** (Summer) + Ajmer — bottom
+- **ग्रीष्म** (Summer) — bottom
 
 ## Getting Started
 

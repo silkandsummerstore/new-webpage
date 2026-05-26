@@ -5,7 +5,7 @@ import { ShopContent } from "./ShopContent";
 
 export const metadata: Metadata = {
   title: "Shop",
-  description: "Discover handcrafted western, Indian, and indo-western pieces from Ajmer.",
+  description: "Discover handcrafted western, Indian, and indo-western pieces from Rajasthan, India.",
 };
 
 export default function ShopPage() {

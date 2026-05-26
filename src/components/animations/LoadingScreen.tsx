@@ -25,30 +25,44 @@ export function LoadingScreen() {
     document.body.style.overflow = "hidden";
 
     const run = async () => {
-      const { gsap } = await import("gsap");
+      // Ensure the loader never blocks the app.
+      // If gsap fails to load for any reason, we still force-hide this overlay.
+      const hardTimeout = window.setTimeout(() => {
+        setVisible(false);
+        setPhase("done");
+        document.body.style.overflow = "";
+      }, 5500);
 
-      await new Promise((r) => setTimeout(r, 200));
+      try {
+        const { gsap } = await import("gsap");
 
-      const strokes = document.querySelectorAll(".loader-flower .flower-stroke");
-      if (strokes.length) {
-        gsap.to(strokes, {
-          strokeDashoffset: 0,
-          duration: 1.8,
-          stagger: 0.12,
-          ease: "power2.inOut",
-        });
+        await new Promise((r) => setTimeout(r, 200));
+
+        const strokes = document.querySelectorAll(".loader-flower .flower-stroke");
+        if (strokes.length) {
+          gsap.to(strokes, {
+            strokeDashoffset: 0,
+            duration: 1.8,
+            stagger: 0.12,
+            ease: "power2.inOut",
+          });
+        }
+
+        await new Promise((r) => setTimeout(r, 1600));
+        setPhase("logo");
+
+        await new Promise((r) => setTimeout(r, 1400));
+        setPhase("exit");
+
+        await new Promise((r) => setTimeout(r, 900));
+      } catch {
+        // Ignore animation failures; still allow the site to load.
+      } finally {
+        window.clearTimeout(hardTimeout);
+        setVisible(false);
+        setPhase("done");
+        document.body.style.overflow = "";
       }
-
-      await new Promise((r) => setTimeout(r, 1600));
-      setPhase("logo");
-
-      await new Promise((r) => setTimeout(r, 1400));
-      setPhase("exit");
-
-      await new Promise((r) => setTimeout(r, 900));
-      setVisible(false);
-      setPhase("done");
-      document.body.style.overflow = "";
     };
 
     run();

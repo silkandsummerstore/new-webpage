@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Custom Pieces",
-  description: "Design your own heirloom. Bespoke consultations from our Ajmer atelier.",
+  description: "Design your own heirloom. Bespoke consultations from our Rajasthan atelier.",
 };
 
 const steps = [
   {
     num: "01",
     title: "Consultation",
-    desc: "A 45-minute conversation — in person at our Ajmer boutique or over video. We listen to your story, occasion, and aesthetic.",
+    desc: "A 45-minute conversation — in person at our Rajasthan studio or over video. We listen to your story, occasion, and aesthetic.",
   },
   {
     num: "02",

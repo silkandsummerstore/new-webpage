@@ -6,7 +6,7 @@ import Image from "next/image";
 const steps = [
   {
     title: "Embroidery",
-    desc: "Mirror work and silk thread — each motif placed by hand in our Ajmer workshop.",
+    desc: "Mirror work and silk thread — each motif placed by hand in our Rajasthan workshop.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
   },
   {

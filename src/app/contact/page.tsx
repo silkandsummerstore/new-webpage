@@ -5,11 +5,9 @@ export const metadata: Metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
-    <StaticPage label="Reach Us" title="Contact">
+    <StaticPage label="Help" title="Contact">
       <p>
-        <strong>Silk & Summer Atelier</strong>
-        <br />
-        Near Ana Sagar, Ajmer, Rajasthan 305001
+        <strong>Silk &amp; Summer Atelier</strong>
       </p>
       <p>
         Email:{" "}
@@ -23,7 +21,10 @@ export default function ContactPage() {
           +91 98765 43210
         </a>
       </p>
-      <p className="italic">Wed–Sun, 11am–7pm · By appointment preferred</p>
+      <p className="italic">
+        Mother–daughter atelier based in Rajasthan, India. Studio visits are by prior appointment only;
+        details are shared once your consultation is confirmed.
+      </p>
     </StaticPage>
   );
 }

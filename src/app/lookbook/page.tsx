@@ -12,7 +12,7 @@ const editorials = [
   {
     title: "Haveli Light",
     season: "SS25",
-    excerpt: "Golden hour in old Ajmer courtyards — mirror work catching last sun.",
+    excerpt: "Golden hour in old Rajasthan courtyards — mirror work catching last sun.",
     image: "https://images.unsplash.com/photo-1610030469983-98e550b16033?w=1200&q=80",
     slug: "haveli-light",
   },
