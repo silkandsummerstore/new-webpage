@@ -34,7 +34,8 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
     };
   }, [menuOpen]);
 
-  const isLight = transparent && !scrolled && !menuOpen;
+  // Header is always white per brand direction.
+  const isLight = false;
 
   return (
     <>
@@ -42,8 +43,8 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-luxury border-b",
           scrolled || menuOpen
-            ? "bg-charcoal/95 backdrop-blur-xl py-3 border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.45)]"
-            : "bg-transparent py-5 md:py-7 border-transparent"
+            ? "bg-white/95 backdrop-blur-xl py-3 border-pink-blush/40 shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
+            : "bg-white/80 backdrop-blur-xl py-5 md:py-7 border-pink-blush/30"
         )}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-10">
@@ -61,9 +62,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
                 href={link.href}
                 className={cn(
                   "luxury-label hover:opacity-100 transition-colors duration-300",
-                  isLight
-                    ? "text-white/85 hover:text-white"
-                    : "text-ivory/80 hover:text-white"
+                  "text-pink-hot/90 hover:text-pink-hot"
                 )}
               >
                 {link.label}
@@ -75,7 +74,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className={cn("p-1 transition-colors", isLight ? "text-white" : "text-ivory")}
+              className="p-1 transition-colors text-pink-hot hover:text-pink-hot/80"
               aria-label="Search"
             >
               <Search size={18} strokeWidth={1.2} />
@@ -84,7 +83,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
               href="/wishlist"
               className={cn(
                 "relative p-1 transition-colors hidden sm:block",
-                isLight ? "text-white" : "text-ivory"
+                "text-pink-hot hover:text-pink-hot/80"
               )}
               aria-label={`Wishlist, ${wishlistCount} items`}
             >
@@ -98,7 +97,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setCartOpen(true)}
-              className={cn("relative p-1 transition-colors", isLight ? "text-white" : "text-ivory")}
+              className="relative p-1 transition-colors text-pink-hot hover:text-pink-hot/80"
               aria-label={`Cart, ${cartCount} items`}
             >
               <ShoppingBag size={18} strokeWidth={1.2} />
@@ -111,7 +110,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className={cn("p-1 lg:hidden", isLight ? "text-white" : "text-ivory")}
+              className="p-1 lg:hidden text-pink-hot hover:text-pink-hot/80"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               {menuOpen ? <X size={22} strokeWidth={1.2} /> : <Menu size={22} strokeWidth={1.2} />}
@@ -126,7 +125,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-charcoal lg:hidden"
+            className="fixed inset-0 z-40 bg-white lg:hidden"
           >
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
@@ -145,7 +144,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-display text-5xl lowercase text-ivory hover:text-pink-blush transition-colors tracking-tight"
+                    className="font-display text-5xl lowercase text-pink-hot hover:text-pink-rose transition-colors tracking-tight"
                   >
                     {link.label}
                   </Link>

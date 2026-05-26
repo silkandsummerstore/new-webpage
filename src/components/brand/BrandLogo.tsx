@@ -21,15 +21,14 @@ export function BrandLogo({
   layout = "stacked",
 }: BrandLogoProps) {
   const sizes = {
-    sm: { logo: "w-20", hindi: "text-[8px]" },
-    md: { logo: "w-24", hindi: "text-[9px]" },
-    lg: { logo: "w-28", hindi: "text-[10px]" },
-    xl: { logo: "w-40", hindi: "text-xs" },
+    sm: { logo: "w-24", hindi: "text-[9px]" },
+    md: { logo: "w-32", hindi: "text-[10px]" },
+    lg: { logo: "w-40", hindi: "text-[11px]" },
+    xl: { logo: "w-52", hindi: "text-sm" },
   };
   const s = sizes[size];
 
-  // Keep Hindi lockup readable on both light and dark header backgrounds.
-  const hindiColor = "text-white";
+  const hindiColor = variant === "light" ? "text-white" : "text-pink-hot";
 
   return (
     <Link href="/" className={cn("group inline-block", className)} aria-label="Silk and Summer — Home">
@@ -59,7 +58,7 @@ export function BrandLogo({
             width={160}
             height={80}
             className={cn(
-              "h-auto",
+              "h-auto object-contain",
               s.logo,
               variant === "light" ? "drop-shadow-[0_0_20px_rgba(0,0,0,0.45)]" : ""
             )}

@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrandLogo } from "@/components/brand/BrandLogo";
-import { FlowerMark } from "@/components/brand/FlowerMark";
+import Image from "next/image";
 
 export function LoadingScreen() {
   const [phase, setPhase] = useState<"draw" | "logo" | "exit" | "done">("draw");
@@ -78,7 +78,7 @@ export function LoadingScreen() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-blush overflow-hidden"
+          className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-white overflow-hidden"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -92,16 +92,24 @@ export function LoadingScreen() {
           />
 
           <div className="relative z-10 flex flex-col items-center px-6">
-            {/* Phase 1: flower draw */}
+            {/* Phase 1: flower rotate upright */}
             <motion.div
-              className="loader-flower w-28 h-28 md:w-36 md:h-36 mb-8"
+              className="w-24 h-24 md:w-32 md:h-32 mb-10"
+              initial={{ rotate: -70, opacity: 0, scale: 0.92 }}
               animate={{
-                opacity: phase === "draw" ? 1 : phase === "logo" ? 0 : 0,
-                scale: phase === "logo" ? 0.85 : 1,
+                opacity: phase === "draw" ? 1 : 0,
+                rotate: phase === "draw" ? 0 : 0,
+                scale: phase === "draw" ? 1 : 0.96,
               }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              <FlowerMark animate strokeClassName="stroke-pink-hot" />
+              <motion.div
+                className="relative w-full h-full"
+                animate={phase === "draw" ? { rotate: [0, 360] } : { rotate: 0 }}
+                transition={{ duration: 6.5, ease: "linear", repeat: Infinity }}
+              >
+                <Image src="/flower.png" alt="" fill className="object-contain" priority />
+              </motion.div>
             </motion.div>
 
             {/* Phase 2: full logo reveal */}
