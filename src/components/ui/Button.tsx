@@ -24,20 +24,16 @@ export function Button({
   const base =
     "inline-flex items-center justify-center px-8 py-3.5 text-[11px] uppercase tracking-editorial font-sans transition-all duration-500 ease-luxury";
   const variants = {
-    primary: "bg-charcoal text-ivory hover:bg-maroon",
+    primary: "bg-pink-hot text-white hover:bg-pink-deep",
     outline:
-      "border border-charcoal/30 text-charcoal hover:border-maroon hover:text-maroon bg-transparent",
-    ghost: "text-charcoal/70 hover:text-maroon underline-offset-4 hover:underline px-0",
+      "border border-charcoal/20 text-charcoal hover:border-pink-hot hover:text-pink-hot bg-transparent",
+    ghost: "text-charcoal/70 hover:text-pink-hot underline-offset-4 hover:underline px-0",
   };
 
   const classes = cn(base, variants[variant], className);
 
   const inner = (
-    <motion.span
-      className="relative z-10"
-      whileHover={{ y: -1 }}
-      transition={{ duration: 0.3 }}
-    >
+    <motion.span className="relative z-10" whileHover={{ y: -1 }} transition={{ duration: 0.3 }}>
       {children}
     </motion.span>
   );

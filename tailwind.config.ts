@@ -9,20 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#F8F4EF",
-        sand: "#E8DFD4",
-        "dusty-rose": "#C9A9A6",
-        terracotta: "#B86B4F",
-        maroon: "#6B3A3A",
-        indigo: "#3D4A6B",
-        gold: "#C4A574",
-        charcoal: "#2A2624",
-        warm: "#D4C4B8",
+        blush: "#FFF5F7",
+        ivory: "#FFFBFC",
+        sand: "#FCE8EE",
+        "pink-hot": "#E8177A",
+        "pink-rose": "#E8879A",
+        "pink-blush": "#F4C4D0",
+        "pink-deep": "#C4126A",
+        charcoal: "#2A1F24",
+        warm: "#F8D4DC",
+        /* legacy aliases */
+        "dusty-rose": "#E8879A",
+        terracotta: "#E8177A",
+        maroon: "#C4126A",
+        gold: "#F4C4D0",
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-cormorant)", "Georgia", "serif"],
+        display: ["var(--font-aprila)", "var(--font-fraunces)", "Georgia", "serif"],
+        script: ["var(--font-halimum)", "var(--font-pinyon)", "cursive"],
+        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
       },
       spacing: {
         "18": "4.5rem",
@@ -35,16 +41,16 @@ const config: Config = {
       },
       animation: {
         "fade-up": "fadeUp 1.2s ease forwards",
-        shimmer: "shimmer 3s ease-in-out infinite",
+        marquee: "marquee 28s linear infinite",
       },
       keyframes: {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        shimmer: {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "1" },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       transitionTimingFunction: {

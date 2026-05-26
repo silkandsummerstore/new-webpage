@@ -12,7 +12,7 @@ export function FeaturedProducts() {
   const featured = products.slice(0, 4);
 
   return (
-    <section className="py-24 md:py-32 bg-ivory">
+    <section className="py-24 md:py-32 bg-blush">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="flex justify-between items-end mb-16">
           <div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Fraunces, Pinyon_Script, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ShopProvider } from "@/context/ShopContext";
 import { ClientNav } from "@/components/layout/ClientNav";
@@ -8,38 +8,39 @@ import { SearchDrawer } from "@/components/shop/SearchDrawer";
 import { CartDrawer } from "@/components/shop/CartDrawer";
 import { CustomCursor } from "@/components/animations/CustomCursor";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
+import { LoadingScreen } from "@/components/animations/LoadingScreen";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  variable: "--font-cormorant",
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const inter = Inter({
+const pinyon = Pinyon_Script({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "400",
+  variable: "--font-pinyon",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Silk & Summer | Modern Heirlooms from Ajmer",
+    default: "Silk & Summer | Contemporary Indian Fashion",
     template: "%s | Silk & Summer",
   },
   description:
-    "Contemporary Indian maximalism from Ajmer, Rajasthan. Handcrafted artisanal luxury — western, Indian & indo-western wear, bags, and one-off pieces.",
-  keywords: [
-    "Indian fashion",
-    "Ajmer boutique",
-    "handcrafted clothing",
-    "indo-western",
-    "affordable luxury",
-    "custom made clothing",
-  ],
+    "Contemporary Indian maximalism. Handcrafted artisanal luxury — silk, summer, and everything in between.",
   openGraph: {
     title: "Silk & Summer",
-    description: "Modern heirlooms from Rajasthan. Crafted for the beautifully undone.",
+    description: "Crafted for the beautifully undone.",
     type: "website",
     locale: "en_IN",
   },
@@ -51,9 +52,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${pinyon.variable} ${dmSans.variable}`}>
       <body className="grain">
         <ShopProvider>
+          <LoadingScreen />
           <SmoothScroll>
             <CustomCursor />
             <ClientNav />

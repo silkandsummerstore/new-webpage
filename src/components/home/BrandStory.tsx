@@ -58,7 +58,7 @@ export function BrandStory() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="story" className="py-24 md:py-40 bg-sand/40">
+    <section ref={sectionRef} id="story" className="py-24 md:py-40 bg-white">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <div>

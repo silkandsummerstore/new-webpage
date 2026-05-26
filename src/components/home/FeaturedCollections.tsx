@@ -64,7 +64,7 @@ export function FeaturedCollections() {
               sizes="(max-width:768px) 75vw, 32vw"
               priority={i < 2}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-pink-hot/80 via-pink-rose/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
               <span className="luxury-label text-ivory/60 mb-2 block">
                 0{i + 1}

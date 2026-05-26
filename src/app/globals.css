@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --ivory: #f8f4ef;
-  --sand: #e8dfd4;
-  --dusty-rose: #c9a9a6;
-  --terracotta: #b86b4f;
-  --maroon: #6b3a3a;
-  --indigo: #3d4a6b;
-  --gold: #c4a574;
-  --charcoal: #2a2624;
+  --blush: #fff5f7;
+  --ivory: #fffbfc;
+  --pink-hot: #e8177a;
+  --pink-rose: #e8879a;
+  --pink-blush: #f4c4d0;
+  --charcoal: #2a1f24;
+  --font-aprila: var(--font-fraunces), Georgia, serif;
+  --font-halimum: var(--font-pinyon), cursive;
 }
 
 * {
@@ -35,35 +35,33 @@ html {
 }
 
 body {
-  @apply bg-ivory text-charcoal font-sans antialiased;
+  @apply bg-blush text-charcoal font-sans antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  @apply bg-dusty-rose/40 text-charcoal;
+  @apply bg-pink-blush text-charcoal;
 }
 
-/* Luxury grain overlay */
 .grain::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9998;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* Editorial typography utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
   .editorial-heading {
-    @apply font-serif font-light tracking-tight leading-[0.95];
+    @apply font-display font-normal tracking-tight leading-[0.92];
   }
   .luxury-label {
-    @apply text-[10px] uppercase tracking-editorial font-sans text-charcoal/60;
+    @apply text-[10px] uppercase tracking-editorial font-sans text-charcoal/55;
   }
   .hide-scrollbar {
     -ms-overflow-style: none;
@@ -72,68 +70,49 @@ body {
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  .stroke-pink-hot {
+    stroke: var(--pink-hot);
+  }
 }
 
-/* Custom cursor (desktop) */
-.custom-cursor {
-  cursor: none;
+.flower-stroke {
+  fill: none;
+  stroke: var(--pink-hot);
 }
 
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--maroon);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: transform 0.15s ease;
+.custom-cursor .cursor-dot {
+  background: var(--pink-hot);
+}
+.custom-cursor .cursor-ring {
+  border-color: var(--pink-hot);
 }
 
-.cursor-ring {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--maroon);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.5;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), width 0.3s, height 0.3s;
-}
-
-/* Horizontal scroll snap */
 .editorial-scroll {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
-
 .editorial-scroll > * {
   scroll-snap-align: start;
 }
 
-/* Image hover zoom container */
 .img-zoom {
   overflow: hidden;
 }
-
 .img-zoom img {
-  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .img-zoom:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
-/* Page transition wrapper */
-.page-enter {
-  opacity: 0;
-  transform: translateY(12px);
+/* Aprila / Halimum — add .woff2 to public/fonts/ to override */
+@font-face {
+  font-family: "Aprila";
+  src: local("Aprila"), local("Fraunces");
+  font-display: swap;
 }
-
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+@font-face {
+  font-family: "Halimum";
+  src: local("Halimum"), local("Pinyon Script");
+  font-display: swap;
 }

@@ -34,7 +34,7 @@ export function OneOfFew() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-maroon/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-pink-hot/75 mix-blend-multiply" />
       </div>
 
       <div data-oneof className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10 text-center text-ivory">
@@ -56,7 +56,7 @@ export function OneOfFew() {
           )}
         </ul>
         <div className="mt-14">
-          <Button href="/shop?category=one-off" variant="primary" className="bg-ivory text-charcoal hover:bg-sand">
+          <Button href="/shop?category=one-off" variant="primary" className="bg-white text-pink-hot hover:bg-blush">
             Discover One-Offs
           </Button>
         </div>

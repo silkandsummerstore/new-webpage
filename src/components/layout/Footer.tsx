@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Logo } from "@/components/logo/Logo";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 
 const shopLinks = [
   { label: "Western", href: "/shop?category=western" },
@@ -35,12 +35,12 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-charcoal text-ivory/80 mt-30">
+    <footer className="bg-charcoal text-white/75 mt-30">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 py-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8">
           {/* Brand + newsletter */}
           <div className="lg:col-span-4">
-            <Logo variant="light" size="lg" />
+            <BrandLogo variant="light" size="lg" showHindi />
             <p className="mt-6 font-serif text-lg text-ivory/60 leading-relaxed max-w-sm">
               Modern heirlooms from Ajmer. Handcrafted for the beautifully undone.
             </p>
