@@ -41,10 +41,10 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-luxury border-b",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-luxury border-b bg-white",
           scrolled || menuOpen
-            ? "bg-white/95 backdrop-blur-xl py-3 border-pink-blush/40 shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
-            : "bg-white/80 backdrop-blur-xl py-5 md:py-7 border-pink-blush/30"
+            ? "py-2 border-pink-blush/40 shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
+            : "py-3 md:py-4 border-pink-blush/30"
         )}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-10">

@@ -21,10 +21,10 @@ export function BrandLogo({
   layout = "stacked",
 }: BrandLogoProps) {
   const sizes = {
-    sm: { logo: "w-24", hindi: "text-[9px]" },
-    md: { logo: "w-32", hindi: "text-[10px]" },
-    lg: { logo: "w-40", hindi: "text-[11px]" },
-    xl: { logo: "w-52", hindi: "text-sm" },
+    sm: { logo: "w-24", hindi: "text-xs" },
+    md: { logo: "w-32", hindi: "text-sm" },
+    lg: { logo: "w-40", hindi: "text-base" },
+    xl: { logo: "w-52", hindi: "text-lg" },
   };
   const s = sizes[size];
 
@@ -53,7 +53,7 @@ export function BrandLogo({
         )}
         <div className="relative">
           <Image
-            src="/logo.png"
+            src="/new logo.png"
             alt="Silk & Summer logo"
             width={160}
             height={80}

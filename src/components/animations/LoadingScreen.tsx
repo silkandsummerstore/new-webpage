@@ -94,7 +94,7 @@ export function LoadingScreen() {
           <div className="relative z-10 flex flex-col items-center px-6">
             {/* Phase 1: flower rotate upright */}
             <motion.div
-              className="w-24 h-24 md:w-32 md:h-32 mb-10"
+              className={`w-48 h-48 md:w-64 md:h-64 ${phase !== "draw" ? "absolute pointer-events-none" : ""}`}
               initial={{ rotate: -70, opacity: 0, scale: 0.92 }}
               animate={{
                 opacity: phase === "draw" ? 1 : 0,
@@ -108,7 +108,7 @@ export function LoadingScreen() {
                 animate={phase === "draw" ? { rotate: [0, 360] } : { rotate: 0 }}
                 transition={{ duration: 6.5, ease: "linear", repeat: Infinity }}
               >
-                <Image src="/flower.png" alt="" fill className="object-contain" priority />
+                <Image src="/new flower.png" alt="" fill className="object-contain" priority />
               </motion.div>
             </motion.div>
 
@@ -126,14 +126,7 @@ export function LoadingScreen() {
               <BrandLogo size="xl" showHindi layout="stacked" />
             </motion.div>
 
-            <motion.p
-              className="luxury-label text-pink-rose/80 mt-10 tracking-[0.4em]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: phase === "logo" ? 1 : 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              Loading
-            </motion.p>
+
           </div>
         </motion.div>
       )}
