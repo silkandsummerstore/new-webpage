@@ -53,14 +53,13 @@ export function BrandLogo({
         )}
         <div className="relative">
           <Image
-            src="/new logo.png"
+            src="/new logo.jpeg"
             alt="Silk & Summer logo"
             width={160}
             height={80}
             className={cn(
               "h-auto object-contain",
-              s.logo,
-              variant === "light" ? "drop-shadow-[0_0_20px_rgba(0,0,0,0.45)]" : ""
+              s.logo
             )}
             priority
           />

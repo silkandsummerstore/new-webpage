@@ -41,15 +41,15 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-luxury border-b bg-white",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-luxury border-b bg-pink-hot",
           scrolled || menuOpen
-            ? "py-2 border-pink-blush/40 shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
-            : "py-3 md:py-4 border-pink-blush/30"
+            ? "py-2 border-pink-deep/20 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+            : "py-3 md:py-4 border-pink-deep/10"
         )}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-10">
           <BrandLogo
-            variant={isLight ? "light" : "color"}
+            variant="light"
             size="md"
             showHindi
             layout="stacked"
@@ -62,7 +62,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
                 href={link.href}
                 className={cn(
                   "luxury-label hover:opacity-100 transition-colors duration-300",
-                  "text-pink-hot/90 hover:text-pink-hot"
+                  "text-white/90 hover:text-white"
                 )}
               >
                 {link.label}
@@ -74,7 +74,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="p-1 transition-colors text-pink-hot hover:text-pink-hot/80"
+              className="p-1 transition-colors text-white hover:text-white/80"
               aria-label="Search"
             >
               <Search size={18} strokeWidth={1.2} />
@@ -83,13 +83,13 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
               href="/wishlist"
               className={cn(
                 "relative p-1 transition-colors hidden sm:block",
-                "text-pink-hot hover:text-pink-hot/80"
+                "text-white hover:text-white/80"
               )}
               aria-label={`Wishlist, ${wishlistCount} items`}
             >
               <Heart size={18} strokeWidth={1.2} />
               {wishlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink-hot text-white text-[9px] flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-white text-pink-hot text-[9px] flex items-center justify-center rounded-full font-bold">
                   {wishlistCount}
                 </span>
               )}
@@ -97,12 +97,12 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setCartOpen(true)}
-              className="relative p-1 transition-colors text-pink-hot hover:text-pink-hot/80"
+              className="relative p-1 transition-colors text-white hover:text-white/80"
               aria-label={`Cart, ${cartCount} items`}
             >
               <ShoppingBag size={18} strokeWidth={1.2} />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink-hot text-white text-[9px] flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-white text-pink-hot text-[9px] flex items-center justify-center rounded-full font-bold">
                   {cartCount}
                 </span>
               )}
@@ -110,7 +110,7 @@ export function Navigation({ transparent = false }: { transparent?: boolean }) {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-1 lg:hidden text-pink-hot hover:text-pink-hot/80"
+              className="p-1 lg:hidden text-white hover:text-white/80"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               {menuOpen ? <X size={22} strokeWidth={1.2} /> : <Menu size={22} strokeWidth={1.2} />}
